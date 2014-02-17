@@ -19,4 +19,4 @@ Issues
 
 Resolution
 ----------
-* Block the ssdp:byebye packets broadcasted by this TV on the DLNA Server through an iptables rule. This will allow Plex Media Server to keep the device mapping and NOT unmap it.
+* Block the [ssdp:byebye](http://www.upnp.org/specs/arch/UPnP-arch-DeviceArchitecture-v1.0-20080424.pdf) packets broadcasted by this TV on the DLNA Server through an iptables rule. This will allow Plex Media Server to keep the device mapping and NOT unmap it.
