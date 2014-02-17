@@ -1,0 +1,68 @@
+<Client name="Philips">
+    <Identification>
+      <!--<Header name="User-Agent" substring="Philips"/>-->
+	<!--Header name="TimeSeekRange.dlna.org" substring="npt=0.000-" /-->
+      <DeviceDescription type="urn:schemas-upnp-org:device:MediaRenderer:1">
+        <FriendlyName substring="PhilipsTV" />
+	<ModelName substring="NMR" />
+	<Manufacturer substring="Philips" />
+	<ManufacturerUrl substring="http://www.philips.com" />
+	<ModelDescription substring="UPnP Media Renderer 1.0" />
+	<ModelNumber substring="1.0" />
+	<ModelUrl substring="http://www.philips.com/" />
+      </DeviceDescription>
+    </Identification>
+    
+    <TranscodeTargets>
+      <VideoProfile container="mpegts" codec="mpeg2video" audioCodec="ac3" context="streaming" />
+      <VideoProfile protocol="hls" container="mpegts" codec="mpeg2video" audioCodec="ac3" context="streaming" />
+      <PhotoProfile container="jpeg" />
+    </TranscodeTargets>
+    <DirectPlayProfiles>
+      <PhotoProfile container="jpeg" />
+    </DirectPlayProfiles>
+
+    <CodecProfiles>
+      <VideoCodec name="wmpeg2video">
+        <Setting name="MaxResolution" value="1920x1080" />
+        <Setting name="MaxFps" value="30" />
+        <Setting name="MaxBitRate" value="20000" />
+      </VideoCodec>
+      <VideoCodec name="vc1">
+        <Setting name="MaxResolution" value="1920x1080" />
+        <Setting name="MaxFps" value="60" />
+        <Setting name="MaxBitRate" value="20000" />
+      </VideoCodec>
+      <VideoCodec name="mpeg4">
+        <Setting name="MaxResolution" value="1920x1080" />
+        <Setting name="MaxFps" value="30" />
+        <Setting name="MaxBitRate" value="20000" />
+      </VideoCodec>
+      <VideoCodec name="h264">
+        <Setting name="MaxResolution" value="1920x1080" />
+        <Setting name="MaxFps" value="30" />
+        <Setting name="MaxBitRate" value="20000" />
+        <Setting name="MaxH264Profile" value="5.1" />
+      </VideoCodec>
+      <VideoAudioCodec name="ac3">
+        <Setting name="MaxAudioChannels" value="6" />
+        <Setting name="MaxBitRate" value="640" />
+      </VideoAudioCodec>
+      <VideoAudioCodec name="mp3">
+      </VideoAudioCodec>
+      <VideoAudioCodec name="ac3,wmav2,wmapro">
+        <Setting name="MaxAudioChannels" value="6" />
+      </VideoAudioCodec>
+    </CodecProfiles>
+
+      <ContainerProfiles>
+         <Container name="mkv" mimeType="video/vnd.dlna.mpeg-tts" />
+       </ContainerProfiles>
+
+<DlnaMediaProfiles>
+  <DlnaVideoProfile container="mpegts" codec="mpeg4" audioCodec="ac3" pn="MPEG_TS_HD_NA" mimeType="video/vnd.dlna.mpeg-tts"/>
+</DlnaMediaProfiles>
+
+  </Client>
+
+
